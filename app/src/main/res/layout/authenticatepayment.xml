@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingStart="50.0dip"
+                android:paddingEnd="50.0dip">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="120dip"
+                        android:layout_height="120dip"
+                        android:layout_marginTop="48.0dip"
+                        android:layout_marginBottom="24.0dip"
+                        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/mobiscrow" />
+
+                    <android.support.constraint.Guideline
+                        android:orientation="horizontal"
+                        android:id="@+id/guideline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.45" />
+
+                    <TextView
+                        android:textSize="@dimen/text_size_large"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/textView13"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="Pin Required,"
+                        android:fontFamily="@font/raleway_regular"
+                        android:layout_below="@+id/imageView5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/guideline5" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="0.0dip"
+                        android:layout_height="16dp"
+                        android:layout_below="@id/textView13"
+                        android:text="Please enter your Mobiscrow Pin to continue."
+                        android:fontFamily="@font/raleway_regular"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView13" />
+
+                    <View
+                        android:id="@+id/gridline"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="24.0dip"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView14" />
+
+
+                    <EditText
+                        android:textSize="13.0sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:id="@+id/txtPin"
+                        android:background="@drawable/bg_button_border_transparent2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:fontFamily="@font/raleway_regular"
+                        android:layout_marginTop="8.0dip"
+                        android:hint="Pin"
+                        android:ems="10" android:maxLength="6"
+                        android:drawablePadding="10.0dip"
+                        android:layout_below="@id/gridline"
+                        android:inputType="numberPassword"
+                        android:alpha="0.8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gridline" />
+                    <View android:id="@+id/gridline1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_marginTop="24.0dip"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtPin" />
+                    <Button
+                        android:textStyle="bold"
+                        android:fontFamily="@font/raleway_regular"
+                        android:textColor="@color/white"
+                        android:id="@+id/btnContinue"
+                        android:background="@drawable/bg_btn_round_white"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginTop="16.0dip"
+                        android:text="Continue"
+                        android:textAllCaps="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gridline1" />
+                    <LinearLayout android:gravity="center"
+                        android:orientation="horizontal"
+                        android:id="@+id/loading_view"
+                        android:background="@drawable/bg_loading_round"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginTop="16.0dip"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gridline1">
+                        <ProgressBar
+                            android:theme="@style/AppTheme.WhiteAccent"
+                            android:id="@+id/progress_bar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30.0dip" />
+                    </LinearLayout>
+                </android.support.constraint.ConstraintLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

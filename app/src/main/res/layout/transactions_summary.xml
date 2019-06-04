@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/main_layout"
+    android:background="@color/colorPrimaryDark"
+    android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/app_bar_layout" android:background="@android:color/transparent" android:fitsSystemWindows="true"
+        android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@id/app_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="true"
+            android:minHeight="?actionBarSize"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back"/>
+            <TextView
+                android:id="@id/toolbar_title"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Transaction Summary"
+                android:textColor="#ffffffff"
+                android:textSize="14.0sp" />
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/app_bar_layout">
+        <LinearLayout android:orientation="vertical"
+            android:paddingTop="5.0dip"
+            android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="35.0dip" android:paddingEnd="35.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="@dimen/transaction_status_title_size"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/raleway_regular"
+                        android:textColor="@color/colorwhite"
+                        android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Status" />
+                    <TextView android:textSize="@dimen/transaction_status_size"
+                        android:textColor="@color/colorwhite"
+                        android:fontFamily="@font/raleway_regular"
+                        android:id="@+id/txt_transaction_status"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Complete" />
+                </LinearLayout>
+                <View android:background="@color/colorwhite" android:layout_width="fill_parent"
+                    android:layout_height="1.0dip" android:layout_marginTop="@dimen/transaction_line_margins" android:layout_marginBottom="@dimen/transaction_line_margins" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/transaction_item_title_size"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/raleway_regular"
+                        android:textColor="@color/colorwhite"
+                        android:id="@+id/textViewRecipient"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Recipient" />
+                    <TextView android:textSize="@dimen/transaction_item_value_size"
+                        android:textColor="@color/colorwhite"
+                        android:id="@+id/txt_receipient"
+                        android:paddingTop="@dimen/transaction_item_padding_top"
+                        android:layout_width="fill_parent"
+                        android:fontFamily="@font/raleway_regular"
+                        android:layout_height="wrap_content"
+                        android:text="0718700519" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/transaction_item_margin_top">
+                    <TextView android:textSize="@dimen/transaction_item_title_size" android:textStyle="bold"
+                        android:textColor="@color/colorwhite"
+                        android:id="@+id/textView21" android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Transaction Ref" />
+                    <TextView android:textSize="@dimen/transaction_item_value_size"
+                        android:textColor="@color/colorwhite"
+                        android:ellipsize="end" android:id="@+id/txt_transaction_ref"
+                        android:paddingLeft="0.0dip"
+                        android:paddingTop="@dimen/transaction_item_padding_top"
+                        android:paddingRight="@dimen/_50dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0743874343" android:maxLines="3"
+                        android:fontFamily="@font/raleway_regular"
+                        android:paddingStart="0.0dip" android:paddingEnd="@dimen/_50dp" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/transaction_item_margin_top">
+                    <TextView
+                        android:textSize="@dimen/transaction_item_title_size"
+                        android:textStyle="bold" android:textColor="@color/colorwhite"
+                        android:id="@+id/textView10" android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" android:text="Description" />
+                    <TextView android:textSize="@dimen/transaction_item_value_size"
+                        android:textColor="@color/colorwhite" android:ellipsize="end"
+                        android:id="@id/txt_description" android:paddingLeft="0.0dip"
+                        android:paddingTop="@dimen/transaction_item_padding_top"
+                        android:paddingRight="@dimen/_50dp" android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Just another overpriced american muscle car"
+                        android:maxLines="3" android:paddingStart="0.0dip" android:paddingEnd="@dimen/_50dp" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="fill_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/transaction_item_margin_top">
+                    <TextView android:textSize="@dimen/transaction_item_title_size"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorwhite"
+                        android:id="@id/textView14"
+                        android:fontFamily="@font/raleway_regular"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" android:text="Payment Method" />
+                    <TextView android:textSize="@dimen/transaction_item_value_size"
+                        android:textColor="@color/colorwhite"
+                        android:id="@+id/txt_payment_method"
+                        android:paddingTop="@dimen/transaction_item_padding_top"
+                        android:fontFamily="@font/raleway_regular"
+                        android:layout_width="fill_parent" android:layout_height="wrap_content"
+                        android:text="M-PESA" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/transaction_item_margin_top">
+                    <TextView android:textSize="@dimen/transaction_item_title_size"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/raleway_regular"
+                        android:textColor="@color/colorwhite"
+                        android:id="@+id/textView16" android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" android:text="Summary" />
+
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/transaction_item_value_size"
+                            android:textColor="@color/colorwhite"
+                            android:id="@+id/textView18"
+                            android:layout_width="0.0dip" android:layout_height="wrap_content"
+                            android:text="Deal Amount "
+                            android:fontFamily="@font/raleway_regular"
+                            android:layout_weight="1.0" />
+                        <TextView android:textSize="@dimen/transaction_item_value_size"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/raleway_regular"
+                            android:textColor="@color/colorwhite"
+                            android:id="@id/txt_amount" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="KES 30,000.00" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView android:textSize="@dimen/transaction_item_value_size"
+                            android:textColor="@color/colorwhite"
+                            android:id="@+id/textView19"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:text="Service Fee"
+                            android:fontFamily="@font/raleway_regular"
+                            android:layout_weight="1.0" />
+                        <TextView android:textSize="@dimen/transaction_item_value_size"
+                            android:textStyle="bold" android:textColor="@color/colorwhite"
+                            android:id="@+id/txt_service_fee"
+                            android:fontFamily="@font/raleway_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="KES 250.00" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View android:background="@color/colorwhite" android:layout_width="fill_parent"
+                    android:layout_height="1.0dip" android:layout_marginTop="@dimen/transaction_line_margins"
+                    android:layout_marginBottom="@dimen/transaction_line_margins" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/transaction_total_text_size"
+                        android:textStyle="bold" android:textColor="@color/colorwhite"
+                        android:id="@+id/textView20" android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Total"
+                        android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/transaction_total_text_size"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/raleway_regular"
+                        android:textColor="@color/colorwhite"
+                        android:id="@+id/txt_total_amount" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="KES 30, 250.00" />
+                </LinearLayout>
+            </LinearLayout>
+            <android.support.constraint.ConstraintLayout android:orientation="horizontal"
+                android:paddingTop="@dimen/transaction_actions_padding"
+                android:paddingBottom="@dimen/transaction_actions_padding"
+                android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button
+                    android:textColor="@android:color/white"
+                    android:id="@+id/btnDecline"
+                    android:background="@drawable/bg_button_border_transparent"
+                    android:visibility="gone"
+                    android:layout_width="0.0dip"
+                    android:layout_height="@dimen/transaction_action_button_height"
+                    android:layout_marginBottom="8.0dip"
+                    android:text="Cancel"
+                    android:layout_marginStart="0.0dip" app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnApprove"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button android:textColor="@android:color/white"
+                    android:id="@+id/btnApprove"
+                    android:background="@drawable/bg_button_border_transparent"
+                    android:visibility="gone" android:layout_width="0.0dip"
+                    android:layout_height="@dimen/transaction_action_button_height"
+                    android:layout_marginBottom="8.0dip"
+                    android:text="Approve"
+                    android:layout_marginStart="16.0dip"
+                    android:layout_marginEnd="0.0dip"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnDispute"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnDecline" />
+                <Button
+                    android:textColor="@android:color/white"
+                    android:id="@+id/btnDispute"
+                    android:background="@drawable/bg_button_border_transparent"
+                    android:visibility="gone"
+                    android:layout_width="0.0dip"
+                    android:layout_height="@dimen/transaction_action_button_height"
+                    android:layout_marginBottom="8.0dip"
+                    android:text="Dispute"
+                    android:layout_marginStart="16.0dip"
+                    android:layout_marginEnd="0.0dip"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnApprove" />
+
+                <Button android:textColor="@android:color/white"
+                    android:id="@+id/btnRetry"
+                    android:background="@drawable/bg_button_border_transparent"
+                    android:visibility="gone" android:layout_width="0.0dip"
+                    android:layout_height="@dimen/transaction_action_button_height"
+                    android:layout_marginBottom="8.0dip"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="Retry"
+                    android:layout_marginStart="0.0dip"
+                    android:layout_marginEnd="0.0dip"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnApprove" />
+
+                <LinearLayout android:gravity="center"
+                    android:orientation="horizontal"
+                    android:id="@+id/loadingView"
+                    android:background="@drawable/bg_button_border_transparent"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/transaction_action_button_height"
+                    android:layout_marginBottom="8.0dip"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <ProgressBar
+                        android:theme="@style/AppTheme.WhiteAccent"
+                        android:id="@+id/progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30.0dip" />
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+    <TextView android:gravity="center"
+        android:id="@+id/tv_error"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

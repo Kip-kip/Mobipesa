@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/main_layout"
+    android:background="@color/white"
+    android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginTop="0.0dip">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingStart="40.0dip"
+                android:paddingEnd="40.0dip">
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/form_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+
+                        android:id="@id/imageView5"
+                        android:layout_width="120dip"
+                        android:layout_height="120dip"
+                        app:layout_constraintBottom_toTopOf="@id/guideline5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/mobiscrow" />
+                    <android.support.constraint.Guideline
+                        android:orientation="horizontal"
+                        android:id="@+id/guideline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintGuide_percent="0.35" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="0.0dip"
+                        android:layout_height="22dp"
+                        android:layout_below="@id/imageView5"
+                        android:text="Register today!"
+                        android:fontFamily="@font/raleway_regular"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_large"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/guideline5" />
+                    <TextView
+                        android:textSize="@dimen/text_size_small"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/textView14"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="Create an Account."
+                        android:fontFamily="@font/raleway_regular"
+                        android:layout_below="@id/textView13"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView13" />
+                    <View android:id="@+id/gridline" android:layout_width="fill_parent"
+                        android:layout_height="1.0dip" android:layout_marginTop="16.0dip"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                    <EditText android:textSize="13.0sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:id="@+id/txtFirstName"
+                        android:fontFamily="@font/raleway_regular"
+                        android:background="@drawable/bg_edit_text_blue"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16.0dip"
+                        android:hint="First Name"
+                        android:ems="10"
+                        android:maxLength="20"
+                        android:drawableLeft="@drawable/ic_name_blue"
+                        android:drawablePadding="10.0dip"
+                        android:inputType="textPersonName"
+                        android:drawableStart="@drawable/ic_name_blue"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/gridline" />
+
+                    <EditText android:textSize="13.0sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:id="@+id/txtLastName"
+                        android:background="@drawable/bg_edit_text_blue"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12.0dip"
+                        android:fontFamily="@font/raleway_regular"
+                        android:hint="Last Name" android:ems="10" android:maxLength="20"
+                        android:drawableLeft="@drawable/ic_name_blue"
+                        android:drawablePadding="10.0dip"
+                        android:inputType="textPersonName"
+                        android:drawableStart="@drawable/ic_name_blue"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtFirstName" />
+
+                    <EditText
+                        android:textSize="13.0sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:id="@+id/txtMobileNumber"
+                        android:background="@drawable/bg_edit_text_blue"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12.0dip"
+                        android:hint="Phone Number"
+                        android:fontFamily="@font/raleway_regular"
+                        android:ems="10" android:maxLength="13"
+                        android:drawableLeft="@drawable/ic_phone_blue"
+                        android:drawablePadding="10.0dip"
+                        android:inputType="phone" android:drawableStart="@drawable/ic_phone_blue"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtLastName" />
+
+                    <EditText
+                        android:textSize="13.0sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:id="@+id/txtEmailAddress"
+                        android:background="@drawable/bg_edit_text_blue"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12.0dip"
+                        android:hint="Email Address"
+                        android:fontFamily="@font/raleway_regular"
+                        android:ems="10" android:maxLength="13"
+                        android:drawableLeft="@drawable/ic_email_blue"
+                        android:drawablePadding="10.0dip"
+                        android:inputType="phone"
+                        android:drawableStart="@drawable/ic_email_blue"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtMobileNumber" />
+
+                    <EditText
+                        android:textSize="13.0sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:id="@+id/txtIdNumber"
+                        android:background="@drawable/bg_edit_text_blue"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12.0dip"
+                        android:hint="ID Number"
+                        android:ems="10" android:maxLength="13"
+                        android:fontFamily="@font/raleway_regular"
+                        android:drawableLeft="@drawable/ic_identity_blue"
+                        android:drawablePadding="10.0dip"
+                        android:inputType="phone"
+                        android:drawableStart="@drawable/ic_identity_blue"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtEmailAddress" />
+
+
+
+
+
+                    <View android:id="@+id/gridline2"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_width="150.0dip" android:layout_height="3.0dip"
+                        android:layout_marginTop="8.0dip" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtIdNumber" />
+
+                    <Button
+                        android:textStyle="bold"
+                        android:id="@+id/btnCreateAccount"
+                        android:background="@drawable/bg_btn_round_white"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginTop="16.0dip"
+                        android:text="Register"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/raleway_regular"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gridline2" />
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:id="@+id/loading_view"
+                        android:background="@drawable/bg_loading_round"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginTop="16.0dip"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gridline2">
+                        <ProgressBar
+                            android:theme="@style/AppTheme.WhiteAccent"
+                            android:id="@id/progress_bar"
+                            android:layout_width="wrap_content" android:layout_height="30.0dip" />
+                    </LinearLayout>
+                    <View android:id="@+id/gridline1" android:layout_width="fill_parent" android:layout_height="1.0dip"
+                        android:layout_marginTop="57.0dip" app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/gridline2" />
+                </android.support.constraint.ConstraintLayout>
+                <LinearLayout
+                    android:gravity="bottom|center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/form_container"
+                    android:layout_alignParentBottom="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:gravity="bottom|center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="16.0dip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50.0dip">
+                        <TextView
+                            android:textColor="@color/colorPrimaryDark"
+                            android:id="@+id/txtAlready"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/raleway_regular"
+                            android:text="Already have an Account?"
+                            android:layout_marginEnd="4.0dip" />
+
+                        <TextView
+                            android:textColor="@color/colorPrimaryDark"
+                            android:id="@+id/txtLogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Login"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/raleway_regular"
+                            android:layout_marginStart="4.0dip" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

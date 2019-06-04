@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="11.0sp"
+    android:textStyle="bold" android:textColor="#ff333333" android:id="@+id/txt_title" android:paddingLeft="18.0dip" android:paddingTop="18.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Jan 3, 2018"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

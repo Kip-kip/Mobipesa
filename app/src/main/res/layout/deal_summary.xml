@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/main_layout" android:background="@drawable/bg_screen" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/app_bar_layout" android:background="@android:color/transparent" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@id/app_toolbar"
+            android:background="@android:color/transparent" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:theme="@style/ThemeOverlay.AppCompat.Dark"
+            xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back"/>
+
+            <TextView android:textSize="14.0sp"
+                android:textColor="#ffffffff" android:layout_gravity="center"
+                android:id="@id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Deal Summary"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView android:id="@+id/summary_container"
+        android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_below="@id/app_bar_layout">
+        <LinearLayout android:orientation="vertical"
+            android:paddingTop="16.0dip"
+            android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="40.0dip" android:paddingEnd="40.0dip">
+            <LinearLayout android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="1.0">
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView android:textSize="26.0sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorwhite"
+                        android:fontFamily="@font/raleway_regular"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Recipient" />
+                    <TextView android:textSize="18.0sp"
+                        android:textColor="@color/colorwhite"
+                        android:fontFamily="@font/raleway_regular"
+                        android:id="@id/textViewTitle" android:layout_width="fill_parent" android:layout_height="wrap_content"
+                        android:text="072233820" />
+                </LinearLayout>
+                <View android:background="@color/colorwhite"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_marginTop="14.0dip"
+                    android:layout_marginBottom="12.0dip" />
+
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/profile_name_size"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorwhite"
+                        android:id="@id/textView10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Description" />
+
+                    <TextView
+                        android:textSize="@dimen/available_balance_size"
+                        android:textColor="@color/colorwhite"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/raleway_regular"
+                        android:id="@id/textViewDescription" android:paddingLeft="0.0dip" android:paddingRight="@dimen/_50dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="Parrot Summe T-shirt XXS Dumb Dumb Sunglasses  Red iPad Leather Case" android:maxLines="3" android:paddingStart="0.0dip" android:paddingEnd="@dimen/_50dp" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+                    <TextView android:textSize="@dimen/profile_name_size"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorwhite"
+                        android:id="@id/textView14" android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Payment Method" />
+
+                    <TextView android:textSize="@dimen/available_balance_size"
+                        android:textColor="@color/colorwhite" android:id="@+id/textViewMethod"
+                        android:paddingTop="4.0dip"
+                        android:fontFamily="@font/raleway_regular" android:paddingBottom="4.0dip"
+                        android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Pay With M-PESA" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.0dip">
+                    <TextView android:textSize="@dimen/profile_name_size"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorwhite"
+                        android:id="@id/textView16"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Summary" />
+                    <LinearLayout android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="@dimen/available_balance_size"
+                            android:textColor="@color/colorwhite"
+                            android:id="@id/textView18"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:text="Deal Amount "
+                            android:fontFamily="@font/raleway_regular"
+                            android:layout_weight="1.0" />
+                        <TextView android:textSize="@dimen/available_balance_size" android:textStyle="bold"
+                            android:textColor="@color/colorwhite" android:id="@id/textViewAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="KES 30,000.00" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal"
+                        android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:textSize="@dimen/available_balance_size"
+                            android:textColor="@color/colorwhite"
+                            android:fontFamily="@font/raleway_regular"
+                            android:id="@id/textView19" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Service Fee" android:layout_weight="1.0" />
+                        <TextView android:textSize="@dimen/available_balance_size" android:textStyle="bold"
+                            android:textColor="@color/colorwhite" android:id="@+id/textViewFee" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="KES 250.00" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@color/colorwhite"
+                    android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="6.0dip" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="20.0sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorwhite"
+                        android:id="@id/textView20"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        android:fontFamily="@font/raleway_regular"
+                        android:layout_weight="1.0" />
+                    <TextView
+                        android:textSize="20.0sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorwhite"
+                        android:id="@+id/textViewTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KES 30,250.00" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:textColor="@color/colorwhite"
+                    android:id="@+id/btnBack"
+                    android:background="@drawable/bg_bordered_transparent_button"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/raleway_regular"
+                    android:layout_height="40.0dip"
+                    android:layout_marginRight="8.0dip" android:text="BACK"
+                    android:layout_weight="1.0" android:layout_marginEnd="8.0dip" />
+                <Button
+                    android:textColor="@color/colorwhite"
+                    android:id="@+id/btnProceed"
+                    android:background="@drawable/bg_bordered_transparent_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40.0dip"
+                    android:layout_marginLeft="8.0dip"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="PROCEED"
+                    android:layout_weight="1.0" android:layout_marginStart="8.0dip" />
+
+                <LinearLayout android:gravity="center" android:orientation="horizontal"
+                    android:id="@+id/loadingView" android:background="@drawable/bg_btn_round"
+                    android:visibility="gone" android:layout_width="fill_parent"
+                    android:layout_height="40.0dip">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/colorwhite"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Processing ..." />
+                    <ProgressBar android:theme="@style/AppTheme.WhiteAccent"
+                        android:id="@id/progress_bar" android:layout_width="wrap_content"
+                        android:layout_height="30.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <TextView android:gravity="center"
+        android:id="@id/tv_error" android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_regular"
+        android:layout_centerInParent="true" />
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

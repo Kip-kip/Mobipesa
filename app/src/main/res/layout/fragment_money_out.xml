@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="#fff5f7f9"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffdee2e6"
+        android:paddingLeft="18.0dip"
+        android:paddingTop="14.0dip"
+        android:paddingBottom="14.0dip"
+        android:text="COMPLETED"
+        android:visibility="gone"
+        android:textColor="#ff333333"
+        android:textSize="11.0sp" />
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/datalistout"
+        android:background="?selectableItemBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10.0dip"
+        android:paddingEnd="12.0dip"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="52.0dip"
+            android:layout_height="52.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:src="@drawable/icon_transfer"
+            android:layout_marginStart="10.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="#ff333333"
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dodge Challenger"
+            android:fontFamily="@font/raleway_regular"
+            android:layout_marginStart="10.0dip"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDescription"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView android:textSize="12.0sp"
+            android:textColor="#ff666666"
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            android:fontFamily="@font/raleway_regular"
+            android:text="Mpesa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+        <TextView android:textSize="12.0sp"
+            android:textColor="#ffd0021b"
+            android:id="@+id/textViewAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- KES 30,000"
+            android:fontFamily="@font/raleway_regular"
+            android:layout_marginEnd="10.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewTitle" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/recycler_view"
+        android:scrollbars="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+
+    <LinearLayout android:gravity="center"
+        android:orientation="vertical"
+        android:id="@id/emptyListView"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ImageView
+            android:layout_width="100.0dip"
+            android:layout_height="100.0dip"
+            android:src="@drawable/ic_book" />
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No recent transactions"
+            android:textAlignment="center" />
+    </LinearLayout>
+</LinearLayout>

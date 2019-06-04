@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:id="@+id/app_bar_layout"
+        android:background="@drawable/bg_screen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            layout="@layout/app_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+
+    </android.support.design.widget.AppBarLayout>
+    <TextView
+        android:textSize="30.0sp"
+        android:textColor="#ff333333"
+        android:fontFamily="@font/raleway_regular"
+        android:id="@+id/textViewCurrency" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginTop="148.0dip"
+        android:layout_marginRight="6.0dip" android:text="KES"
+        android:layout_marginEnd="6.0dip"
+        app:layout_constraintEnd_toStartOf="@+id/textViewAmount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout" />
+
+    <TextView android:textSize="48.0sp"
+        android:textColor="#ff333333"
+        android:id="@+id/textViewAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="6.0dip"
+        android:text="0.00"
+        android:fontFamily="@font/raleway_regular"
+        android:layout_marginStart="6.0dip"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewCurrency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewCurrency" />
+
+    <TextView android:textSize="11.0sp"
+        android:textColor="#ff666666"
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:fontFamily="@font/raleway_regular"
+        android:text="Available" android:layout_marginStart="8.0dip"
+        android:layout_marginEnd="8.0dip" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAmount" />
+
+    <View android:id="@+id/view" android:background="#ff979797"
+        android:layout_width="fill_parent" android:layout_height="1.0dip"
+        android:layout_marginLeft="16.0dip" android:layout_marginTop="45.0dip"
+        android:layout_marginRight="16.0dip" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="#ff232323"
+        android:gravity="center"
+        android:id="@+id/textView12"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28.0dip"
+        android:layout_marginTop="32.0dip"
+        android:layout_marginRight="28.0dip"
+        android:text="Leave the money in your balance and use it automatically when you send money or buy something.  Or transfer it to your M-PESA account."
+        android:lineSpacingExtra="5.0sp"
+        android:fontFamily="@font/raleway_regular"
+        android:layout_marginStart="28.0dip"
+        android:layout_marginEnd="28.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <Button
+        android:id="@+id/btnTransfer"
+        android:layout_width="0.0dip"
+        android:layout_height="50.0dip"
+        android:background="@drawable/bg_btn"
+        android:foreground="?selectableItemBackground"
+        android:text="Transfer to Mpesa"
+        android:textAllCaps="false"
+        android:fontFamily="@font/raleway_regular"
+        android:textColor="@android:color/white"
+        android:textSize="13.0sp"
+        android:layout_margin="15dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

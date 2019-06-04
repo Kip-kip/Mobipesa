@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40.0dip"
+        android:layout_marginEnd="40.0dip"
+        android:layout_alignParentStart="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.1" />
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="120.0dip"
+            android:layout_height="0.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginStart="8.0dip"
+            android:layout_marginEnd="8.0dip"
+            app:layout_constraintBottom_toTopOf="@id/textView13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline1"
+            app:srcCompat="@drawable/mobiscrow" />
+
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@id/textView13"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:text="Please enter the one time code which was sent to your number." android:textAlignment="center" app:layout_constraintBottom_toTopOf="@id/guideline2" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+        <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <EditText
+        android:id="@+id/codeInputView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20.0dip"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+         />
+
+        <EditText
+            android:textSize="13.0sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:id="@+id/txtPin"
+            android:background="@drawable/bg_button_border_transparent2"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/button_height"
+            android:fontFamily="@font/raleway_regular"
+            android:layout_marginTop="8.0dip"
+            android:hint="Pin"
+            android:ems="10" android:maxLength="6"
+            android:drawablePadding="10.0dip"
+            android:layout_below="@id/gridline"
+            android:inputType="numberPassword"
+            android:alpha="0.8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2"
+            />
+
+        <Button
+            android:id="@+id/btnVerify"
+            android:layout_width="0.0dip"
+            android:layout_height="43.0dip"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/bg_btn_round_white"
+
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/codeInputView" />
+        <TextView android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/txtNoCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8.0dip"
+            android:text="Did not receive code?"
+            android:layout_marginEnd="4.0dip"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toStartOf="@+id/txtResend"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/txtResend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend Code"
+            android:layout_marginStart="4.0dip"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNoCode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtNoCode"
+            app:layout_constraintTop_toTopOf="@+id/txtNoCode" />
+        <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:id="@id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.95" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

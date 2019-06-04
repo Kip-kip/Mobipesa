@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Mobiscrow</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="profile_image">Profile Image</string>
+    <string name="reset_text">Reset</string>
+    <string name="payment_method_prompt">Payment Method</string>
+    <string name="transaction_success_message">Transaction Submitted Successfully. Please Wait to Authorize the payment from your M-PESA Account</string>
+
+    <string name="withdrawal_success_message">Funds Successfully Transferred to your M-PESA account. Please Check your balance.</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Reliable</string>
+    <string name="slide_1_desc">All time round, all for your own convinience</string>
+
+    <string name="slide_2_title">Fast</string>
+    <string name="slide_2_desc">Quickly pay for goods and services online straight from your phone</string>
+
+
+
+    <string name="slide_4_title">Secure</string>
+    <string name="slide_4_desc">No more worrying about conmen online. Transact safely.</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyCbNPy5hqDEQFNNRXXXXXXXXXXXXXXXXXXX
+    </string>
+
+    <string name="step_of">Step %1$d of %2$d</string>
+    <string name="section_format">Section : %1$d</string>
+
+    <string name="about_text">The best android implementation of material UI components. This app implemented based on Google Design Guidelines.
+    </string>
+
+</resources>
