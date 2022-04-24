@@ -73,6 +73,20 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
+                    <TextView
+                        android:textSize="13.0sp"
+                        android:textColor="#450072"
+                        android:id="@+id/textView14"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20.0dip"
+                        android:text="(No need to sign up, This is a demo app so just click the button to proceed)"
+                        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
                     <View
                         android:id="@+id/gridline"
                         android:layout_width="fill_parent"

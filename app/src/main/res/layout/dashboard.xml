@@ -479,7 +479,65 @@ LOAD RECYCLER VIEW using transaction_list_item.xml
                     app:layout_constraintTop_toTopOf="@+id/textViewTitle" />
             </android.support.constraint.ConstraintLayout>
 
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/datalist"
+                android:background="?selectableItemBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10.0dip"
+                android:paddingEnd="12.0dip"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
 
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="52.0dip"
+                    android:layout_height="52.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:src="@drawable/icon_shopping"
+                    android:layout_marginStart="10.0dip"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:textSize="14.0sp"
+                    android:textColor="#ff333333"
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="Dodge Challenger"
+                    android:layout_marginStart="10.0dip"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewDescription"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView android:textSize="12.0sp"
+                    android:textColor="#ff666666"
+                    android:id="@+id/textViewDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4.0dip"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="Mpesa"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+                <TextView android:textSize="12.0sp"
+                    android:textColor="#AD0E4406"
+                    android:id="@+id/textViewAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="+ KES 30,000"
+                    android:layout_marginEnd="10.0dip"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewTitle" />
+            </android.support.constraint.ConstraintLayout>
 
 
             <!--Display the image and text below if there are no records available-->
@@ -505,15 +563,15 @@ LOAD RECYCLER VIEW using transaction_list_item.xml
 
 
 <!--progress bar set visibility to visible whenever loading data from APIs-->
-        <com.mobiscrow.widgets.ViewLoadingDotsFade
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:visibility="visible"
-            android:background="@color/colorPrimaryDarkest"
-            app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/recycler_view"/>
+<!--        <com.mobiscrow.widgets.ViewLoadingDotsFade-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:visibility="visible"-->
+<!--            android:background="@color/colorPrimaryDarkest"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/recycler_view"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/recycler_view"/>-->
 
     </android.support.constraint.ConstraintLayout>
 
